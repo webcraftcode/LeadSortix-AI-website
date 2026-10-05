@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>LeadSortix AI – Smart Lead Qualifier & Action Router for WordPress</title>
+  <meta name="title" content="LeadSortix AI – Smart Lead Qualifier & Action Router for WordPress">
+  <meta name="description" content="Sub-second AI lead triage for WordPress. Intercept form submissions across CF7, Elementor, WPForms & Forminator. Route emergencies to instant hotline calls & consultations to Cal.com / Calendly.">
+  <meta name="keywords" content="WordPress AI lead qualifier, urgent lead router, Contact Form 7 AI, Elementor form AI triage, emergency lead hotline, Cal.com WordPress, Resend WordPress plugin">
+  <meta name="author" content="wpemran">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leadsortix.ai/">
+  <meta property="og:title" content="LeadSortix AI – Smart Lead Qualifier & Action Router">
+  <meta property="og:description" content="Transform static WordPress leads into instant emergency phone calls & automated calendar bookings in <350ms.">
+  <meta property="og:image" content="assets/images/og-preview.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="LeadSortix AI – Smart Lead Qualifier & Action Router">
+  <meta property="twitter:description" content="Transform static WordPress leads into instant emergency phone calls & automated calendar bookings.">
+
+  <!-- Favicon (Inline SVG Data URI for instant zero-dependency display) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230f172a'/><path d='M16 6L24 20H8L16 6Z' fill='%23f97316'/><circle cx='16' cy='18' r='4' fill='%2306b6d4'/></svg>">
+
+  <!-- Master Stylesheet (System UI, Zero Render-Blocking External Google Fonts) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LeadSortix AI",
+    "operatingSystem": "WordPress 6.0+",
+    "applicationCategory": "BusinessApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "wpemran"
+    },
+    "description": "Smart Lead Qualifier & Action Router for WordPress that intercepts form submissions, scores urgency via AI, and routes emergencies to hotlines."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Ambient High-Tech Grid Overlay -->
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       Sticky Navigation Bar
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="LeadSortix AI Home">
+        <div class="brand-icon-box" title="LeadSortix AI Router">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="7" y="2" width="10" height="6" rx="2"></rect>
+            <path d="M4 15h5a2 2 0 0 1 2 2v5"></path>
+            <path d="M20 15h-5a2 2 0 0 0-2 2v5"></path>
+            <circle cx="4" cy="15" r="2.5" fill="var(--flame-500)"></circle>
+            <circle cx="20" cy="15" r="2.5" fill="var(--cyan-400)"></circle>
+            <path d="M12 8v5"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          LeadSortix <span class="brand-badge-ai">AI</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#simulator" class="nav-link">Simulator</a></li>
+          <li><a href="#ecosystem" class="nav-link">Integrations</a></li>
+          <li><a href="#ai-brains" class="nav-link">AI Models</a></li>
+          <li><a href="#dual-engine" class="nav-link">Workflow</a></li>
+          <li><a href="#security" class="nav-link">Security</a></li>
+          <li><a href="#developers" class="nav-link">Docs</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/webcraftcode/LeadSortix-AI" target="_blank" rel="noopener noreferrer" class="github-star-pill" title="View Source on GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>Star</span>
+          <span style="opacity: 0.6; font-size: 0.75rem;">v1.2.0</span>
+        </a>
+
+        <a href="https://wordpress.org/plugins/leadsortix-ai" target="_blank" rel="noopener noreferrer" class="btn btn-wp btn-sm" id="nav-cta-download">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.026 18.064c-.378-.016-.734-.055-1.06-.118l3.197-9.303 3.25 9.294c-.95.309-1.99.48-3.07.48-.77 0-1.509-.088-2.317-.353zm-6.666-6.064c0-2.457.994-4.686 2.605-6.305l3.96 10.842c-3.923-1.34-6.565-3.896-6.565-4.537zm13.118-4.498c.45.696.72 1.52.72 2.408 0 1.22-.507 2.37-1.348 3.284l-2.613-7.518c1.393.447 2.502 1.042 3.241 1.826z"/>
+          </svg>
+          <span>Get Free Plugin</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         A. Hero Section (Above the Fold)
+         ========================================================================== -->
+    <section class="section section-hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left: Hero Headline & Action -->
+          <div class="hero-content">
+            <!-- Glowing Notification Badge -->
+            <div class="hero-pill-badge">
+              <span class="pulse-indicator"></span>
+              <span class="hero-pill-text">
+                WordPress.org Verified <span style="opacity: 0.4;">|</span> 
+                <span class="pill-highlight">Sub-Second Dual-Action AI Triage</span>
+              </span>
+            </div>
+
+            <!-- Compelling Headline -->
+            <h1 class="hero-headline">
+              Transform Static Website Leads into 
+              <span class="gradient-headline-emergency">Instant Emergency Calls</span> &amp; 
+              <span class="gradient-headline-booking">Automated Bookings</span>.
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="hero-subheadline">
+              LeadSortix AI intercepts inbound submissions across <strong>Contact Form 7, Elementor, WPForms &amp; Forminator</strong>. 
+              Within <strong>&lt;350ms</strong>, our multi-model AI brain triages urgency—instantly routing high-stake emergencies to operator phone hotlines while routing routine consultations straight to your booking calendar.
+            </p>
+
+            <!-- Primary CTAs -->
+            <div class="hero-cta-group">
+              <a href="https://wordpress.org/plugins/leadsortix-ai" target="_blank" rel="noopener noreferrer" class="btn btn-wp btn-lg" id="hero-cta-wp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.026 18.064c-.378-.016-.734-.055-1.06-.118l3.197-9.303 3.25 9.294c-.95.309-1.99.48-3.07.48-.77 0-1.509-.088-2.317-.353zm-6.666-6.064c0-2.457.994-4.686 2.605-6.305l3.96 10.842c-3.923-1.34-6.565-3.896-6.565-4.537zm13.118-4.498c.45.696.72 1.52.72 2.408 0 1.22-.507 2.37-1.348 3.284l-2.613-7.518c1.393.447 2.502 1.042 3.241 1.826z"/>
+                </svg>
+                <span>Download on WordPress.org (Free)</span>
+              </a>
+
+              <a href="#simulator" class="btn btn-glass btn-lg" id="hero-cta-demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Explore Interactive Demo</span>
+              </a>
+
+              <button class="btn btn-secondary btn-lg" data-open-drawer title="Open Live WP-Admin Lead Drawer Demo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+                <span>Preview Admin Drawer</span>
+              </button>
+            </div>
+
+            <!-- Proof / Stat Badges -->
+            <div class="hero-stats-row">
+              <div class="hero-stat-item">
+                <span class="hero-stat-value">&lt; 350<span class="stat-accent">ms</span></span>
+                <span class="hero-stat-label">Average AI Triage Latency</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-value">100<span class="stat-accent">%</span></span>
+                <span class="hero-stat-label">Zero-Loss Local Heuristics</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-value">9<span class="stat-accent">+</span></span>
+                <span class="hero-stat-label">Native WordPress Form Builders</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-value">3,000<span class="stat-accent">/mo</span></span>
+                <span class="hero-stat-label">Free Resend API Emails</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: 3D Showcase Mockup of LeadSortix AI Admin Drawer -->
+          <div class="hero-visual-card">
+            
+            <!-- Floating Badge 1: Speed Benchmark -->
+            <div class="floating-badge floating-badge-1">
+              <span class="pulse-indicator"></span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>Groq LPU: <strong>248ms</strong></span>
+            </div>
+
+            <!-- Floating Badge 2: Emergency Intercept -->
+            <div class="floating-badge floating-badge-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--flame-500)" stroke-width="2.5">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              <span>Urgent Triage: <strong>98/100</strong></span>
+            </div>
+
+            <div class="mockup-3d-wrapper">
+              <!-- Window Chrome Header -->
+              <div class="mockup-header">
+                <div class="mockup-dots">
+                  <span class="mockup-dot dot-red"></span>
+                  <span class="mockup-dot dot-yellow"></span>
+                  <span class="mockup-dot dot-green"></span>
+                </div>
+                <div class="mockup-title-bar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  <span>LeadSortix AI v1.2 – Admin Quick Triage Drawer</span>
+                </div>
+                <div class="mockup-status-live">
+                  <span class="pulse-indicator"></span>
+                  Live Hook Active
+                </div>
+              </div>
+
+              <!-- Mockup Content -->
+              <div class="mockup-body">
+                
+                <!-- Lead Meta Item -->
+                <div class="mockup-lead-header">
+                  <div class="lead-author-meta">
+                    <div class="lead-avatar">SJ</div>
+                    <div>
+                      <div class="lead-name">
+                        Sarah Jenkins
+                        <span class="lead-source-tag">Contact Form 7</span>
+                      </div>
+                      <div class="lead-time">Submitted 12 seconds ago • Los Angeles, CA</div>
+                    </div>
+                  </div>
+                  <span class="triage-latency-pill">265ms (Groq Llama-3)</span>
+                </div>
+
+                <!-- Live Triage Evaluation Box -->
+                <div class="mockup-triage-result">
+                  <div class="triage-top-row">
+                    <div class="triage-badge-urgent">
+                      <span class="pulse-indicator" style="background:#ef4444;box-shadow:0 0 6px #ef4444"></span>
+                      🚨 CRITICAL EMERGENCY (Score: 98/100)
+                    </div>
+                    <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">
+                      ID: #LSX-89210
+                    </span>
+                  </div>
+
+                  <div class="triage-lead-snippet">
+                    "EMERGENCY! Main water pipe burst upstairs in our bathroom. Water is pouring through the ceiling right into the kitchen! We need a licensed plumber ASAP!"
+                  </div>
+
+                  <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--text-secondary); margin-top:0.4rem;">
+                    <span>AI Reasoning: <strong>Structural Hazard / Active Flood</strong></span>
+                    <span style="color:var(--emerald-400);">✓ Sanitized DDE Clean</span>
+                  </div>
+                </div>
+
+                <!-- Dual Action Branch Buttons -->
+                <div class="mockup-actions-area">
+                  <a href="tel:+18005557582" class="mockup-hotline-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>Instant Hotline Dispatch (1-800-555-PLUMB)</span>
+                  </a>
+
+                  <div class="mockup-secondary-actions">
+                    <button class="mockup-micro-btn" data-open-drawer>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                      <span>Draft AI Resend Email</span>
+                    </button>
+                    <button class="mockup-micro-btn" onclick="alert('SMS notification was pushed to on-call plumbing technician!')">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                      <span>SMS Alert Active</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         B. Live Interactive Lead Triage Simulator (Interactive Widget)
+         ========================================================================== -->
+    <section class="section" id="simulator">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag tag-orange">
+            <span class="pulse-indicator" style="background:var(--flame-500); box-shadow:0 0 8px var(--flame-500)"></span>
+            Live Interactive Triage Simulator
+          </div>
+          <h2 class="section-title">Test the Sub-Second AI Triage Engine</h2>
+          <p class="section-subtitle">
+            Experience how LeadSortix AI intercepts raw inbound payloads, evaluates urgency scores across LLM providers, and executes immediate dual-action routing.
+          </p>
+        </div>
+
+        <div class="simulator-box">
+          <!-- Top Chrome Bar with Preset Switcher -->
+          <div class="simulator-chrome">
+            <div class="simulator-tabs-label">Select Realistic Preset:</div>
+            <div class="preset-pills-row">
+              <button class="preset-pill-btn active" data-preset="emergency_pipe">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--flame-500)" stroke-width="2.5">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+                <span>Burst Pipe Flood (Emergency)</span>
+              </button>
+              <button class="preset-pill-btn" data-preset="remodel_quote">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--indigo-400)" stroke-width="2.2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Kitchen Remodel (Quote)</span>
+              </button>
+              <button class="preset-pill-btn" data-preset="server_hvac">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--flame-500)" stroke-width="2.2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+                <span>Server HVAC Chiller (Critical)</span>
+              </button>
+              <button class="preset-pill-btn" data-preset="warranty_faq">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2.2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Pricing &amp; Warranty (Routine)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Main Interactive Console -->
+          <div class="simulator-grid">
+            
+            <!-- Left Console: Form Input -->
+            <div class="simulator-input-side">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="font-size:1.0625rem; font-weight:700; color:#fff; display:flex; align-items:center; gap:0.5rem;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2">
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                  </svg>
+                  Inbound Form Submission Payload
+                </h3>
+                <span style="font-size:0.75rem; color:var(--emerald-400); font-family:var(--font-mono);">● Ready</span>
+              </div>
+
+              <div class="sim-options-row">
+                <div class="form-field-group">
+                  <label class="field-label" for="sim-lead-name">Customer Name</label>
+                  <input type="text" id="sim-lead-name" class="sim-input" value="Sarah Jenkins">
+                </div>
+                <div class="form-field-group">
+                  <label class="field-label" for="sim-lead-phone">Phone Number</label>
+                  <input type="text" id="sim-lead-phone" class="sim-input" value="+1 (555) 382-9912">
+                </div>
+              </div>
+
+              <div class="sim-options-row">
+                <div class="form-field-group">
+                  <label class="field-label" for="sim-lead-email">Email Address</label>
+                  <input type="email" id="sim-lead-email" class="sim-input" value="sarah.j@example.com">
+                </div>
+                <div class="form-field-group">
+                  <label class="field-label" for="sim-lead-source">Form Plugin Intercepted</label>
+                  <select id="sim-lead-source" class="sim-select">
+                    <option value="Contact Form 7">Contact Form 7 (wpcf7_mail_sent)</option>
+                    <option value="Elementor Pro Forms">Elementor Pro Forms (elementor_pro/new_record)</option>
+                    <option value="WPForms">WPForms (wpforms_process_complete)</option>
+                    <option value="Forminator">Forminator (forminator_custom_form_submit)</option>
+                    <option value="Fluent Forms">Fluent Forms</option>
+                    <option value="Gravity Forms">Gravity Forms</option>
+                    <option value="Ninja Forms">Ninja Forms</option>
+                    <option value="REST Webhook">External REST Webhook</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field-group">
+                <label class="field-label" for="sim-ai-model">
+                  AI Triage Model Brain
+                  <span class="field-hint">Select Provider to compare latency</span>
+                </label>
+                <select id="sim-ai-model" class="sim-select">
+                  <option value="groq" selected>Groq (Llama 3.1 70B) – Sub-Second (~280ms)</option>
+                  <option value="gemini">Google Gemini 1.5 Flash – Smart Context (~350ms, Free Tier)</option>
+                  <option value="openai">OpenAI ChatGPT (GPT-4o-mini) – Enterprise (~420ms)</option>
+                  <option value="claude">Anthropic Claude (3.5 Haiku) – Sentiment (~450ms)</option>
+                  <option value="grok">xAI (Grok 2) – Fast Conversational (~480ms)</option>
+                  <option value="heuristic">Local Offline Heuristic Parser – Instant (&lt;2ms, Zero Loss)</option>
+                </select>
+              </div>
+
+              <div class="form-field-group">
+                <label class="field-label" for="sim-lead-message">
+                  Customer Message / Inquiry Content
+                  <span class="field-hint">Edit to test your own keywords</span>
+                </label>
+                <textarea id="sim-lead-message" class="sim-textarea" placeholder="Type customer message or test emergency triggers like 'burst pipe', 'urgent', 'quote', 'booking'..."></textarea>
+              </div>
+
+              <div class="sim-action-btn-row">
+                <button class="btn-run-triage" id="btn-run-triage">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Run AI Triage Test</span>
+                </button>
+                <button class="btn-reset-sim" id="btn-reset-sim" title="Reset to Burst Pipe Emergency">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                    <path d="M3 3v5h5"></path>
+                  </svg>
+                  <span>Reset</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Console: Dynamic Output & Routing Trigger -->
+            <div class="simulator-output-side">
+              
+              <!-- Scan Progress Bar -->
+              <div class="scan-progress-bar-wrapper">
+                <div class="scan-progress-bar" id="scan-progress-bar"></div>
+              </div>
+
+              <div class="output-header-bar">
+                <span class="output-title">Real-Time Routing Verdict</span>
+                <span class="latency-display" id="sim-latency-val">⚡ 268 ms • Groq</span>
+              </div>
+
+              <div class="triage-outcome-display">
+                <!-- Circular Score Gauge Card -->
+                <div class="outcome-gauge-card">
+                  <div class="score-circle-wrapper">
+                    <svg class="score-circle-svg" viewBox="0 0 72 72">
+                      <circle class="score-circle-bg" cx="36" cy="36" r="30"></circle>
+                      <circle class="score-circle-progress" id="sim-score-progress" cx="36" cy="36" r="30"></circle>
+                    </svg>
+                    <div class="score-circle-text" id="sim-score-number">98</div>
+                  </div>
+
+                  <div class="outcome-meta">
+                    <div class="outcome-tag is-emergency" id="sim-outcome-tag">
+                      <span class="pulse-indicator" style="background:var(--neon-red);box-shadow:0 0 8px var(--neon-red)"></span>
+                      🚨 High-Urgency Emergency (98/100)
+                    </div>
+                    <div class="outcome-decision-label" id="sim-outcome-title">
+                      Immediate Operator Intervention Required
+                    </div>
+                    <div class="outcome-explanation" id="sim-outcome-desc">
+                      Critical structural water leak requiring immediate technician phone dispatch within &lt;5 minutes.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Dynamic Action Trigger Card (Swaps dynamically) -->
+                <div id="sim-dynamic-action-card" class="generated-action-card type-emergency">
+                  <!-- Populated by simulator.js -->
+                </div>
+
+                <!-- Expandable Raw Developer JSON Payload -->
+                <div class="raw-json-accordion">
+                  <div class="raw-json-toggle" id="raw-json-toggle">
+                    <span>Inspect Raw REST Triage Payload</span>
+                    <svg id="raw-json-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.2s;">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                  <pre class="raw-json-code-box" id="raw-json-output">
+                    <!-- Populated dynamically -->
+                  </pre>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         C. Universal Zero-Config Form Interceptor (Ecosystem Grid)
+         ========================================================================== -->
+    <section class="section" id="ecosystem" style="background: rgba(11, 15, 25, 0.5);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag tag-indigo">
+            Zero-Config Form Interceptor
+          </div>
+          <h2 class="section-title">Zero Layout Disruption. Zero Webhooks.</h2>
+          <p class="section-subtitle">
+            LeadSortix AI hooks directly into your existing WordPress form builder's native submission pipelines. 
+            No third-party middleware, no Zapier fees, and no styling breakage.
+          </p>
+        </div>
+
+        <div class="ecosystem-grid">
+          
+          <!-- Form 1: Forminator -->
+          <div class="form-compat-card" data-form-name="Forminator">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#0073aa;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> 100% Native
+              </span>
+            </div>
+            <div class="form-name">Forminator</div>
+            <div class="form-hook-tag">forminator_custom_form_submit</div>
+            <p class="form-desc">
+              Intercepts calculations, poll submissions, and multi-part inputs before database write. Click to inspect hook.
+            </p>
+          </div>
+
+          <!-- Form 2: Contact Form 7 -->
+          <div class="form-compat-card" data-form-name="Contact Form 7">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#38bdf8;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> 5M+ Installs
+              </span>
+            </div>
+            <div class="form-name">Contact Form 7</div>
+            <div class="form-hook-tag">wpcf7_mail_sent</div>
+            <p class="form-desc">
+              Hooks seamlessly after CF7 validation. Extracts posted tags without interfering with custom CF7 mail tags.
+            </p>
+          </div>
+
+          <!-- Form 3: Elementor Forms -->
+          <div class="form-compat-card" data-form-name="Elementor Forms">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#f43f5e;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> Pro &amp; Popups
+              </span>
+            </div>
+            <div class="form-name">Elementor Forms</div>
+            <div class="form-hook-tag">elementor_pro/forms/new_record</div>
+            <p class="form-desc">
+              Automatic field mapping for Elementor Pro popup modals, split-step forms, and landing pages.
+            </p>
+          </div>
+
+          <!-- Form 4: WPForms -->
+          <div class="form-compat-card" data-form-name="WPForms">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#f97316;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="9" x2="15" y2="9"></line>
+                  <line x1="9" y1="13" x2="15" y2="13"></line>
+                  <line x1="9" y1="17" x2="11" y2="17"></line>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> Lite &amp; Pro
+              </span>
+            </div>
+            <div class="form-name">WPForms</div>
+            <div class="form-hook-tag">wpforms_process_complete</div>
+            <p class="form-desc">
+              Zero configuration required. Intercepts both free and premium WPForms entries with instant field normalization.
+            </p>
+          </div>
+
+          <!-- Form 5: Fluent Forms -->
+          <div class="form-compat-card" data-form-name="Fluent Forms">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#6366f1;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> Ultra Fast
+              </span>
+            </div>
+            <div class="form-name">Fluent Forms</div>
+            <div class="form-hook-tag">fluentform/submission_inserted</div>
+            <p class="form-desc">
+              Synchronizes with Fluent Form's high-speed schema. Flawless compatibility with conversational forms.
+            </p>
+          </div>
+
+          <!-- Form 6: Gravity Forms -->
+          <div class="form-compat-card" data-form-name="Gravity Forms">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#10b981;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> Enterprise
+              </span>
+            </div>
+            <div class="form-name">Gravity Forms</div>
+            <div class="form-hook-tag">gform_after_submission</div>
+            <p class="form-desc">
+              Deep integration with advanced conditional routing, multi-page surveys, and payment fields.
+            </p>
+          </div>
+
+          <!-- Form 7: Ninja Forms -->
+          <div class="form-compat-card" data-form-name="Ninja Forms">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#818cf8;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> Native
+              </span>
+            </div>
+            <div class="form-name">Ninja Forms</div>
+            <div class="form-hook-tag">ninja_forms_after_submission</div>
+            <p class="form-desc">
+              Hooks into the Ninja action pipeline asynchronously without slowing down browser confirmation messages.
+            </p>
+          </div>
+
+          <!-- Form 8: Formidable Forms -->
+          <div class="form-compat-card" data-form-name="Formidable Forms">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#f59e0b;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> Advanced
+              </span>
+            </div>
+            <div class="form-name">Formidable Forms</div>
+            <div class="form-hook-tag">frm_after_create_entry</div>
+            <p class="form-desc">
+              Auto-extracts repeater rows and complex calculation fields into standardized triage context.
+            </p>
+          </div>
+
+          <!-- Form 9: REST API Webhooks -->
+          <div class="form-compat-card" data-form-name="REST API Webhook">
+            <div class="form-card-top">
+              <div class="form-icon-box" style="color:#22d3ee;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="form-status-badge">
+                <span class="pulse-indicator"></span> Headless
+              </span>
+            </div>
+            <div class="form-name">REST API Webhook</div>
+            <div class="form-hook-tag">/wp-json/leadsortix/v1/triage</div>
+            <p class="form-desc">
+              Connect external apps, Webflow, Next.js, or mobile apps via token-authenticated endpoints.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Banner Highlight -->
+        <div class="zero-config-banner">
+          <div class="zero-config-content">
+            <div class="zero-config-title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              Zero Webhooks to Configure • Zero Layout Disruption
+            </div>
+            <div class="zero-config-subtitle">
+              Activate the plugin, and LeadSortix AI automatically recognizes all active form builders on your WordPress installation. It intercepts data under the hood with zero design alterations to your existing landing pages.
+            </div>
+          </div>
+          <a href="https://wordpress.org/plugins/leadsortix-ai" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Install Free WordPress Plugin
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         D. Multi-Provider AI Brain Grid
+         ========================================================================== -->
+    <section class="section" id="ai-brains">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag tag-cyan">
+            Multi-Provider AI Brain Grid
+          </div>
+          <h2 class="section-title">Choose Your Intelligence Engine</h2>
+          <p class="section-subtitle">
+            Bring your own API key or rely on our offline fail-safe parser. Switch between 5 cutting-edge AI providers in one click.
+          </p>
+        </div>
+
+        <div class="ai-models-grid">
+          
+          <!-- 1. Google Gemini -->
+          <div class="ai-card card-gemini">
+            <div class="ai-card-header">
+              <div class="ai-logo-title-group">
+                <div class="ai-avatar" style="color:#38bdf8;">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 1.5C12 7.3 7.3 12 1.5 12C7.3 12 12 16.7 12 22.5C12 16.7 16.7 12 22.5 12C16.7 12 12 7.3 12 1.5Z"/>
+                  </svg>
+                </div>
+                <div class="ai-name-box">
+                  <div class="ai-name">Google Gemini</div>
+                  <div class="ai-model-version">Gemini 1.5 Flash / Pro</div>
+                </div>
+              </div>
+              <span class="ai-metric-pill pill-cyan">~320ms</span>
+            </div>
+            <p class="ai-desc">
+              Ultra-smart multi-intent reasoning with generous Free Tier allowances. Ideal for small businesses wanting zero monthly AI API costs.
+            </p>
+            <div class="ai-specs-list">
+              <div class="ai-spec-row">
+                <span class="spec-key">API Cost:</span>
+                <span class="spec-val" style="color:var(--emerald-400);">100% Free Tier Compatible</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Context Window:</span>
+                <span class="spec-val">1M+ Tokens</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Best For:</span>
+                <span class="spec-val">Complex, multi-paragraph contractor bids</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Groq (Llama 3 / Qwen) -->
+          <div class="ai-card card-groq">
+            <div class="ai-card-header">
+              <div class="ai-logo-title-group">
+                <div class="ai-avatar" style="color:#f97316;">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <div class="ai-name-box">
+                  <div class="ai-name">Groq LPU™ Engine</div>
+                  <div class="ai-model-version">Llama 3.1 70B &amp; Qwen</div>
+                </div>
+              </div>
+              <span class="ai-metric-pill pill-flame">&lt; 280ms</span>
+            </div>
+            <p class="ai-desc">
+              World’s fastest sub-second inference speed. Classifies emergencies and triggers operator dials before the user even navigates away.
+            </p>
+            <div class="ai-specs-list">
+              <div class="ai-spec-row">
+                <span class="spec-key">Inference Speed:</span>
+                <span class="spec-val" style="color:var(--flame-500);">Fastest in class (~280ms)</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Model Weights:</span>
+                <span class="spec-val">Meta Llama-3.1 70B</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Best For:</span>
+                <span class="spec-val">Emergency services, lockouts, plumbing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. OpenAI ChatGPT -->
+          <div class="ai-card card-openai">
+            <div class="ai-card-header">
+              <div class="ai-logo-title-group">
+                <div class="ai-avatar" style="color:#10b981;">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.259 24a6.0557 6.0557 0 0 0 5.7718-4.2057 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7466-7.0731z"/>
+                  </svg>
+                </div>
+                <div class="ai-name-box">
+                  <div class="ai-name">OpenAI ChatGPT</div>
+                  <div class="ai-model-version">GPT-4o &amp; GPT-4o-mini</div>
+                </div>
+              </div>
+              <span class="ai-metric-pill pill-emerald">~410ms</span>
+            </div>
+            <p class="ai-desc">
+              Dependable enterprise intelligence with proven classification accuracy and high JSON schema enforcement.
+            </p>
+            <div class="ai-specs-list">
+              <div class="ai-spec-row">
+                <span class="spec-key">Reliability:</span>
+                <span class="spec-val">99.99% Global Uptime</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Format:</span>
+                <span class="spec-val">Strict JSON Schema Output</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Best For:</span>
+                <span class="spec-val">Corporate B2B lead qualification</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Anthropic Claude -->
+          <div class="ai-card card-claude">
+            <div class="ai-card-header">
+              <div class="ai-logo-title-group">
+                <div class="ai-avatar" style="color:#d97706;">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2a1.5 1.5 0 0 1 1.5 1.5v3.18a1.5 1.5 0 0 1-3 0V3.5A1.5 1.5 0 0 1 12 2zm6.36 3.64a1.5 1.5 0 0 1 0 2.12l-2.25 2.25a1.5 1.5 0 1 1-2.12-2.12l2.25-2.25a1.5 1.5 0 0 1 2.12 0zm3.64 6.36a1.5 1.5 0 0 1-1.5 1.5h-3.18a1.5 1.5 0 0 1 0-3h3.18a1.5 1.5 0 0 1 1.5 1.5zm-3.64 6.36a1.5 1.5 0 0 1-2.12 0l-2.25-2.25a1.5 1.5 0 0 1 2.12-2.12l2.25 2.25a1.5 1.5 0 0 1 0 2.12zM12 22a1.5 1.5 0 0 1-1.5-1.5v-3.18a1.5 1.5 0 0 1 3 0v3.18A1.5 1.5 0 0 1 12 22zm-6.36-3.64a1.5 1.5 0 0 1 0-2.12l2.25-2.25a1.5 1.5 0 1 1 2.12 2.12l-2.25 2.25a1.5 1.5 0 0 1-2.12 0zM2 12a1.5 1.5 0 0 1 1.5-1.5h3.18a1.5 1.5 0 0 1 0 3H3.5A1.5 1.5 0 0 1 2 12zm3.64-6.36a1.5 1.5 0 0 1 2.12 0l2.25 2.25a1.5 1.5 0 1 1-2.12 2.12l-2.25-2.25a1.5 1.5 0 0 1 0-2.12z"/>
+                  </svg>
+                </div>
+                <div class="ai-name-box">
+                  <div class="ai-name">Anthropic Claude</div>
+                  <div class="ai-model-version">Claude 3.5 Haiku</div>
+                </div>
+              </div>
+              <span class="ai-metric-pill" style="background:rgba(217,119,6,0.15); color:#fbbf24; border:1px solid rgba(217,119,6,0.3);">~440ms</span>
+            </div>
+            <p class="ai-desc">
+              Superior sentiment understanding. Detects subtle emotional distress, frustrated phrasing, or high-value customer intent effortlessly.
+            </p>
+            <div class="ai-specs-list">
+              <div class="ai-spec-row">
+                <span class="spec-key">Sentiment Nuance:</span>
+                <span class="spec-val">Exceptional Human Tone</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Speed:</span>
+                <span class="spec-val">Optimized Haiku Architecture</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Best For:</span>
+                <span class="spec-val">Medical, legal, and white-glove consulting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. xAI Grok 2 -->
+          <div class="ai-card">
+            <div class="ai-card-header">
+              <div class="ai-logo-title-group">
+                <div class="ai-avatar" style="color:#e2e8f0;">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </div>
+                <div class="ai-name-box">
+                  <div class="ai-name">xAI (Grok 2)</div>
+                  <div class="ai-model-version">Grok-2 Mini / Vision</div>
+                </div>
+              </div>
+              <span class="ai-metric-pill" style="background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.2);">~470ms</span>
+            </div>
+            <p class="ai-desc">
+              Fast modern conversational reasoning equipped with cutting-edge real-time contextual awareness.
+            </p>
+            <div class="ai-specs-list">
+              <div class="ai-spec-row">
+                <span class="spec-key">Architecture:</span>
+                <span class="spec-val">xAI Grok NextGen</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Reasoning:</span>
+                <span class="spec-val">Direct &amp; Uncensored</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Best For:</span>
+                <span class="spec-val">Tech startups and dynamic sales pipelines</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Fail-Safe Heuristic Parser (Offline Local Regex) -->
+          <div class="ai-card card-heuristic">
+            <div class="ai-card-header">
+              <div class="ai-logo-title-group">
+                <div class="ai-avatar" style="color:var(--emerald-400); background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.4);">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 12 15 16 10"></polyline>
+                  </svg>
+                </div>
+                <div class="ai-name-box">
+                  <div class="ai-name">Offline Heuristic Engine</div>
+                  <div class="ai-model-version">Local PHP Pattern Matcher</div>
+                </div>
+              </div>
+              <span class="ai-metric-pill pill-emerald">&lt; 2ms (Offline)</span>
+            </div>
+            <p class="ai-desc">
+              <strong>Zero Lead Loss Guarantee.</strong> If external AI APIs time out or run out of quota, our local regex heuristic parser instantly scores the lead in &lt;2ms without external network requests.
+            </p>
+            <div class="ai-specs-list">
+              <div class="ai-spec-row">
+                <span class="spec-key">Latency:</span>
+                <span class="spec-val" style="color:var(--emerald-400); font-weight:800;">Instant (&lt; 2 milliseconds)</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">External Dependencies:</span>
+                <span class="spec-val">Zero (100% Local PHP)</span>
+              </div>
+              <div class="ai-spec-row">
+                <span class="spec-key">Guarantee:</span>
+                <span class="spec-val">100% Uptime even during internet outages</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         E. Dual-Channel Conversion Engine (The Core Workflow Visualizer)
+         ========================================================================== -->
+    <section class="section" id="dual-engine">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag tag-orange">
+            The Core Workflow
+          </div>
+          <h2 class="section-title">The Dual-Channel Conversion Engine</h2>
+          <p class="section-subtitle">
+            One inbound form. Two specialized conversion branches. Never leave high-paying emergency callers waiting, and never waste time coordinating consultation schedules.
+          </p>
+        </div>
+
+        <div class="workflow-container">
+          
+          <!-- Isometric Step-by-Step Flow Pipeline -->
+          <div class="pipeline-flow-wrapper">
+            <div class="pipeline-steps-row">
+              
+              <!-- Step 1: Inbound Lead Interception -->
+              <div class="pipeline-step-card">
+                <span class="step-number-tag">Stage 01</span>
+                <div class="step-title">1. Form Intercept</div>
+                <div class="step-details">
+                  Submission captured via native hooks (CF7, Elementor, WPForms). Payload sanitized with WordPress nonce &amp; Anti-DDE.
+                </div>
+              </div>
+
+              <!-- Arrow 1 -->
+              <div class="pipeline-arrow" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+
+              <!-- Step 2: Sub-Second AI Triage -->
+              <div class="pipeline-step-card" style="border-color: rgba(6, 182, 212, 0.4); box-shadow: 0 0 25px rgba(6, 182, 212, 0.15);">
+                <span class="step-number-tag" style="background:rgba(6,182,212,0.2);">Stage 02 • &lt;350ms</span>
+                <div class="step-title">2. AI Urgency Triage</div>
+                <div class="step-details">
+                  Multi-provider models classify sentiment, dollar value, and danger criteria. Generates an urgency score from 0 to 100.
+                </div>
+              </div>
+
+              <!-- Arrow 2 -->
+              <div class="pipeline-arrow" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+
+              <!-- Step 3: Dual Action Branching -->
+              <div class="pipeline-branches-col">
+                <!-- Branch 1 -->
+                <div class="branch-card branch-emergency">
+                  <div class="branch-header">
+                    <div class="branch-title">
+                      <span>🚨 Branch 1: High Urgency (Score &gt; 75)</span>
+                    </div>
+                    <span class="branch-pill pill-hotline">Hotline Trigger</span>
+                  </div>
+                  <div class="branch-desc">
+                    Triggers glowing phone hotline auto-dialer for dispatchers, sends emergency SMS alerts, and marks lead as RED in WP Admin.
+                  </div>
+                </div>
+
+                <!-- Branch 2 -->
+                <div class="branch-card branch-booking">
+                  <div class="branch-header">
+                    <div class="branch-title">
+                      <span>📅 Branch 2: Routine Consultation (Score &le; 75)</span>
+                    </div>
+                    <span class="branch-pill pill-calendar">Calendar Route</span>
+                  </div>
+                  <div class="branch-desc">
+                    Dispatches personalized AI draft via Resend REST API with embedded <strong>Cal.com / Calendly</strong> instant booking link.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Deep-Dive Comparison Columns -->
+          <div class="dual-engine-cards-grid">
+            
+            <!-- Column 1: Emergency Triage -->
+            <div class="dual-card card-urgent">
+              <div class="dual-card-title">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--flame-500)" stroke-width="2.5">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Branch 1: High-Urgency Emergency Triage
+              </div>
+              <p style="font-size:0.9375rem; color:var(--text-secondary); line-height: 1.6;">
+                For water damage, HVAC breakdowns, lockouts, legal arrests, and emergency repairs—every second of delay costs thousands in lost business.
+              </p>
+
+              <ul class="dual-features-list">
+                <li class="dual-feature-item">
+                  <span class="feature-check-icon">✓</span>
+                  <div>
+                    <strong>Pulsing Operator Hotline:</strong> One-tap phone button prominently flashes on admin drawer and notification feeds.
+                  </div>
+                </li>
+                <li class="dual-feature-item">
+                  <span class="feature-check-icon">✓</span>
+                  <div>
+                    <strong>Instant SMS &amp; Webhook Escalation:</strong> Auto-dispatches SMS alerts via Twilio/Vonage or pushes alert to Slack/Teams.
+                  </div>
+                </li>
+                <li class="dual-feature-item">
+                  <span class="feature-check-icon">✓</span>
+                  <div>
+                    <strong>Live Dispatch Priority Queue:</strong> Automatically sorts high-urgency leads to the top of your WordPress dashboard.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Routine Consultation -->
+            <div class="dual-card card-routine">
+              <div class="dual-card-title">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--indigo-400)" stroke-width="2.5">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Branch 2: Routine Consultation Routing
+              </div>
+              <p style="font-size:0.9375rem; color:var(--text-secondary); line-height: 1.6;">
+                Eliminate the painful 5-email dance of "what time works for you?". Turn general inquiries into booked calendar appointments while you sleep.
+              </p>
+
+              <ul class="dual-features-list">
+                <li class="dual-feature-item">
+                  <span class="feature-check-icon">✓</span>
+                  <div>
+                    <strong>Cal.com &amp; Calendly Integration:</strong> Embed your meeting link directly inside automated, hyper-personalized response emails.
+                  </div>
+                </li>
+                <li class="dual-feature-item">
+                  <span class="feature-check-icon">✓</span>
+                  <div>
+                    <strong>In-App Direct Email Composer:</strong> Review, edit, and click-to-send AI generated follow-up drafts right from the WordPress admin.
+                  </div>
+                </li>
+                <li class="dual-feature-item">
+                  <span class="feature-check-icon">✓</span>
+                  <div>
+                    <strong>99.9% Primary Inbox Deliverability:</strong> Powered by Resend REST API—avoid spam folders and broken WordPress PHP mailers.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         F. Enterprise Infrastructure & Security Showcase
+         ========================================================================== -->
+    <section class="section" id="security" style="background: rgba(11, 15, 25, 0.6);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag tag-emerald">
+            Enterprise Infrastructure
+          </div>
+          <h2 class="section-title">Security-Hardened &amp; High-Deliverability</h2>
+          <p class="section-subtitle">
+            Engineered from ground up with enterprise grade security standards, zero external trackers, and bulletproof transactional email infrastructure.
+          </p>
+        </div>
+
+        <div class="security-grid">
+          
+          <!-- Card 1: Resend REST API Integration -->
+          <div class="security-card">
+            <div class="security-card-header">
+              <div class="sec-icon-box resend-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 2L11 13"></path>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div class="sec-title-box">
+                <div class="sec-title">Resend REST API Integration</div>
+                <div class="sec-subtitle">Goodbye broken WordPress wp_mail() spam filters</div>
+              </div>
+            </div>
+
+            <div class="sec-items-list">
+              <div class="sec-item">
+                <div class="sec-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="sec-item-text">
+                  <div class="sec-item-title">3,000 Free Transactional Emails / Month</div>
+                  <div class="sec-item-desc">Resend provides a generous free tier for every WordPress site, saving hundreds of dollars compared to traditional email relay services.</div>
+                </div>
+              </div>
+
+              <div class="sec-item">
+                <div class="sec-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="sec-item-text">
+                  <div class="sec-item-title">99.9% Primary Inbox Deliverability</div>
+                  <div class="sec-item-desc">Direct HTTP REST dispatch eliminates SMTP handshake timeouts, shared server IP blacklisting, and spam quarantine traps.</div>
+                </div>
+              </div>
+
+              <div class="sec-item">
+                <div class="sec-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="sec-item-text">
+                  <div class="sec-item-title">One-Click In-App Dispatcher</div>
+                  <div class="sec-item-desc">Review the AI pre-drafted response in your WP Admin Drawer, adjust tone or pricing, and hit send in 1 second.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Security Hardened Shield -->
+          <div class="security-card">
+            <div class="security-card-header">
+              <div class="sec-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="sec-title-box">
+                <div class="sec-title">Enterprise Security Shield</div>
+                <div class="sec-subtitle">Protection against modern web attack vectors</div>
+              </div>
+            </div>
+
+            <div class="sec-items-list">
+              <div class="sec-item">
+                <div class="sec-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="sec-item-text">
+                  <div class="sec-item-title">Dual-Mode REST Authentication</div>
+                  <div class="sec-item-desc">Protected by cryptographically signed WordPress Nonces for frontend submissions, plus Bearer Header tokens for headless external webhooks.</div>
+                </div>
+              </div>
+
+              <div class="sec-item">
+                <div class="sec-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="sec-item-text">
+                  <div class="sec-item-title">Rate Limiting via WordPress Transients</div>
+                  <div class="sec-item-desc">Strict IP-based burst rate limiting prevents malicious bot spams, quota exhaustion, and Denial-of-Service attacks.</div>
+                </div>
+              </div>
+
+              <div class="sec-item">
+                <div class="sec-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="sec-item-text">
+                  <div class="sec-item-title">Anti-Formula CSV Injection (DDE Protection)</div>
+                  <div class="sec-item-desc">All CSV exports automatically sanitize fields starting with <code>=</code>, <code>+</code>, <code>-</code>, or <code>@</code> to protect admin Excel spreadsheets from code execution.</div>
+                </div>
+              </div>
+
+              <div class="sec-item">
+                <div class="sec-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="sec-item-text">
+                  <div class="sec-item-title">100% GDPR Compliant &amp; Zero Tracking</div>
+                  <div class="sec-item-desc">Zero telemetry, zero remote Google font tracking, and zero phoning home. All customer data stays under your own WordPress database authority.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         G. Developer & Helpful Resources Section
+         ========================================================================== -->
+    <section class="section" id="developers">
+      <div class="container dev-resources-container">
+        
+        <div class="section-header">
+          <div class="section-tag tag-cyan">
+            Developer &amp; Setup Resources
+          </div>
+          <h2 class="section-title">Up and Running in 3 Minutes</h2>
+          <p class="section-subtitle">
+            Get started immediately via WordPress Admin or automate via WP-CLI and cURL Webhook integrations.
+          </p>
+        </div>
+
+        <!-- 3-Step Quick Start Guide -->
+        <div class="steps-cards-grid">
+          <div class="step-guide-card">
+            <div class="step-num-badge">1</div>
+            <div class="step-guide-title">Install &amp; Activate Plugin</div>
+            <div class="step-guide-desc">
+              Search for <strong>LeadSortix AI</strong> inside your WordPress Plugin Directory (or run WP-CLI) and click <em>Activate</em>.
+            </div>
+          </div>
+
+          <div class="step-guide-card">
+            <div class="step-num-badge">2</div>
+            <div class="step-guide-title">Paste Any AI Provider Key</div>
+            <div class="step-guide-desc">
+              Add your Google Gemini (Free), Groq, OpenAI, Claude, or xAI API key. Or select the offline heuristic mode with zero keys required.
+            </div>
+          </div>
+
+          <div class="step-guide-card">
+            <div class="step-num-badge">3</div>
+            <div class="step-guide-title">Set Hotline &amp; Calendar URL</div>
+            <div class="step-guide-desc">
+              Enter your emergency operator phone number and paste your Cal.com / Calendly consultation link. That's it—triage is active!
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer Code Snippets with Copy Buttons -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          
+          <!-- Snippet 1: cURL REST API Webhook -->
+          <div class="code-snippet-box">
+            <div class="code-snippet-header">
+              <span class="snippet-lang-tag">cURL REST Webhook Request</span>
+              <button class="btn-copy-snippet" data-copy-target="curl-code-snippet">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy cURL
+              </button>
+            </div>
+            <pre class="code-pre" id="curl-code-snippet"><span class="code-keyword">curl</span> -X POST <span class="code-url">https://yourdomain.com/wp-json/leadsortix/v1/triage</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span> \
+  -H <span class="code-string">"X-LSX-Secret: lsx_sec_live_99214a"</span> \
+  -d '{
+    <span class="code-string">"name"</span>: <span class="code-string">"Sarah Jenkins"</span>,
+    <span class="code-string">"phone"</span>: <span class="code-string">"+15553829912"</span>,
+    <span class="code-string">"email"</span>: <span class="code-string">"sarah@example.com"</span>,
+    <span class="code-string">"message"</span>: <span class="code-string">"Urgent: burst pipe upstairs leaking water!"</span>
+  }'</pre>
+          </div>
+
+          <!-- Snippet 2: WP-CLI Installation -->
+          <div class="code-snippet-box">
+            <div class="code-snippet-header">
+              <span class="snippet-lang-tag">WP-CLI Rapid Deployment</span>
+              <button class="btn-copy-snippet" data-copy-target="wpcli-code-snippet">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Command
+              </button>
+            </div>
+            <pre class="code-pre" id="wpcli-code-snippet"><span class="code-comment"># Install and activate LeadSortix AI via WP-CLI</span>
+<span class="code-keyword">wp</span> plugin install leadsortix-ai --activate
+
+<span class="code-comment"># Set default emergency hotline & provider</span>
+<span class="code-keyword">wp</span> option update leadsortix_hotline_phone <span class="code-string">"+18005557582"</span>
+<span class="code-keyword">wp</span> option update leadsortix_ai_provider <span class="code-string">"groq"</span></pre>
+          </div>
+
+        </div>
+
+        <!-- Comprehensive FAQ Accordion -->
+        <div id="faq" style="margin-top: 2rem;">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <h3 class="section-title" style="font-size: 2rem;">Frequently Asked Questions</h3>
+          </div>
+
+          <div class="faq-accordion-group">
+            
+            <div class="faq-item open">
+              <button class="faq-question-btn">
+                <span>Do I have to change or redesign my existing WordPress forms?</span>
+                <span class="faq-chevron">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                No! LeadSortix AI is built on a 100% zero-configuration interceptor. It listens to WordPress native form action hooks (such as <code>wpcf7_mail_sent</code> or <code>elementor_pro/forms/new_record</code>) after validation. Your form’s visual style, CSS classes, and submit buttons remain completely untouched.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn">
+                <span>Can I use LeadSortix AI for free without monthly fees?</span>
+                <span class="faq-chevron">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                Yes. The LeadSortix AI WordPress plugin is 100% open source under the GPL-2.0+ license. Furthermore, both Google Gemini (Free Tier) and our built-in Offline Heuristic Parser require $0/month in API costs, and Resend provides 3,000 free transactional emails every month.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn">
+                <span>What happens if an external AI API (e.g. OpenAI or Groq) goes down?</span>
+                <span class="faq-chevron">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                We have built a fail-safe heuristic parser directly in PHP. If the remote AI API times out after 1.5 seconds or returns an error, the local parser immediately falls back to pattern matching in under 2ms. Your leads are never lost or stuck in an error state.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn">
+                <span>How does the Cal.com / Calendly consultation integration work?</span>
+                <span class="faq-chevron">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                When a routine consultation inquiry is detected (e.g. "quote for bathroom renovation"), LeadSortix AI drafts a personalized email referencing the customer's specific needs, pre-filling their name, and inserting your custom Cal.com or Calendly booking URL so they can schedule a slot instantly.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn">
+                <span>Is customer data sent to third-party tracking servers?</span>
+                <span class="faq-chevron">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                Absolutely not. We do not operate any middleman telemetry servers. Submissions go straight from your WordPress server to whichever LLM provider API key you choose. No analytics tracking, no remote fonts, and 100% GDPR compliance.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================================================
+       H. High-Conversion Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Top Call to Action Banner -->
+      <div class="footer-top-banner">
+        <h2 class="footer-banner-title">Never Miss a High-Stake Emergency Lead Again.</h2>
+        <p class="footer-banner-desc">
+          Install LeadSortix AI on your WordPress site today. Turn website visitors into immediate phone calls and automated calendar appointments in under 350ms.
+        </p>
+        <div class="footer-cta-group">
+          <a href="https://wordpress.org/plugins/leadsortix-ai" target="_blank" rel="noopener noreferrer" class="btn btn-wp btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.026 18.064c-.378-.016-.734-.055-1.06-.118l3.197-9.303 3.25 9.294c-.95.309-1.99.48-3.07.48-.77 0-1.509-.088-2.317-.353zm-6.666-6.064c0-2.457.994-4.686 2.605-6.305l3.96 10.842c-3.923-1.34-6.565-3.896-6.565-4.537zm13.118-4.498c.45.696.72 1.52.72 2.408 0 1.22-.507 2.37-1.348 3.284l-2.613-7.518c1.393.447 2.502 1.042 3.241 1.826z"/>
+            </svg>
+            <span>Download on WordPress.org (Free)</span>
+          </a>
+
+          <a href="https://github.com/webcraftcode/LeadSortix-AI" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Grid Columns -->
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <div class="brand-icon-box" style="width:34px; height:34px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="7" y="2" width="10" height="6" rx="2"></rect>
+                <path d="M4 15h5a2 2 0 0 1 2 2v5"></path>
+                <path d="M20 15h-5a2 2 0 0 0-2 2v5"></path>
+                <circle cx="4" cy="15" r="2.5" fill="var(--flame-500)"></circle>
+                <circle cx="20" cy="15" r="2.5" fill="var(--cyan-400)"></circle>
+                <path d="M12 8v5"></path>
+              </svg>
+            </div>
+            <span>LeadSortix AI</span>
+          </div>
+          <p class="footer-brand-desc">
+            Smart Lead Qualifier &amp; Action Router for WordPress. Dual-channel AI triage connecting emergency hotlines with automated consultation appointments.
+          </p>
+          <div style="display:flex; gap:0.5rem; align-items:center;">
+            <span style="font-size:0.75rem; padding:0.2rem 0.5rem; border-radius:4px; background:rgba(255,255,255,0.06); color:var(--text-secondary); border:1px solid var(--border-subtle);">
+              GPL-2.0+ Open Source
+            </span>
+            <span style="font-size:0.75rem; padding:0.2rem 0.5rem; border-radius:4px; background:rgba(16,185,129,0.12); color:var(--emerald-400); border:1px solid rgba(16,185,129,0.25);">
+              Zero Tracking
+            </span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <div class="footer-col-title">Product</div>
+          <ul class="footer-links-list">
+            <li><a href="#simulator" class="footer-link">Live Lead Simulator</a></li>
+            <li><a href="#ecosystem" class="footer-link">Supported Form Builders</a></li>
+            <li><a href="#ai-brains" class="footer-link">AI Model Benchmarks</a></li>
+            <li><a href="#dual-engine" class="footer-link">Conversion Engine</a></li>
+            <li><a href="#security" class="footer-link">Security Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <div class="footer-col-title">Ecosystem</div>
+          <ul class="footer-links-list">
+            <li><a href="https://wordpress.org/plugins/leadsortix-ai" target="_blank" rel="noopener noreferrer" class="footer-link">WordPress.org Directory</a></li>
+            <li><a href="https://github.com/webcraftcode/LeadSortix-AI" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Repository</a></li>
+            <li><a href="#developers" class="footer-link">REST Webhook API</a></li>
+            <li><a href="https://resend.com" target="_blank" rel="noopener noreferrer" class="footer-link">Resend REST Integration</a></li>
+            <li><a href="https://cal.com" target="_blank" rel="noopener noreferrer" class="footer-link">Cal.com Booking</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <div class="footer-col-title">Documentation</div>
+          <ul class="footer-links-list">
+            <li><a href="#developers" class="footer-link">3-Step Quick Start</a></li>
+            <li><a href="#faq" class="footer-link">FAQ &amp; Troubleshooting</a></li>
+            <li><a href="https://github.com/webcraftcode/LeadSortix-AI/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="footer-link">Changelog (v1.2.0)</a></li>
+            <li><a href="https://github.com/webcraftcode/LeadSortix-AI/issues" target="_blank" rel="noopener noreferrer" class="footer-link">Submit Issue / Bug</a></li>
+            <li><a href="https://github.com/webcraftcode/LeadSortix-AI/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link">GPL License Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Credits Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 LeadSortix AI. Open Source under GNU General Public License v2 or later.
+        </div>
+        <div class="footer-author-credit">
+          Proudly built for the WordPress community by <a href="https://github.com/wpemran" target="_blank" rel="noopener noreferrer" class="author-link">wpemran</a> / <a href="https://github.com/webcraftcode" target="_blank" rel="noopener noreferrer" class="author-link">webcraftcode</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==========================================================================
+       Interactive Slide-Over Admin Drawer Mockup Modal
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="slide-drawer" id="wp-admin-drawer" aria-label="LeadSortix AI WordPress Admin Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2.2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="15" y1="3" x2="15" y2="21"></line>
+        </svg>
+        <span>WP Admin Quick Lead Drawer</span>
+      </div>
+      <button class="btn-close-drawer" data-close-drawer aria-label="Close Drawer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-content">
+      
+      <!-- Lead Top Summary -->
+      <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <h3 style="font-size:1.25rem; font-weight:800; color:#fff;">Sarah Jenkins</h3>
+          <p style="font-size:0.8125rem; color:var(--text-secondary);">+1 (555) 382-9912 • sarah.j@example.com</p>
+        </div>
+        <span class="triage-badge-urgent" style="font-size:0.8125rem;">
+          🚨 Urgency 98/100
+        </span>
+      </div>
+
+      <!-- Urgency Card -->
+      <div style="background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); border-radius:var(--radius-md); padding:1rem;">
+        <div style="font-weight:700; color:#fca5a5; font-size:0.875rem; margin-bottom:0.35rem;">
+          ⚡ Live Diagnosis (Groq LPU™ - 265ms)
+        </div>
+        <div style="font-size:0.8125rem; color:#e2e8f0; line-height:1.5;">
+          "Main water pipe burst upstairs in bathroom. Water pouring into living room!"
+        </div>
+        <div style="margin-top:0.75rem; display:flex; gap:0.5rem;">
+          <a href="tel:+18005557582" class="btn btn-emergency btn-sm" style="flex:1;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Dial Caller (+1 555-382-9912)
+          </a>
+        </div>
+      </div>
+
+      <!-- Resend One-Click Composer -->
+      <div style="display:flex; flex-direction:column; gap:0.75rem; background:rgba(15,23,42,0.6); padding:1rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <label style="font-size:0.8125rem; font-weight:700; color:#fff;">
+            Resend REST API One-Click Email Responder
+          </label>
+          <span style="font-size:0.6875rem; color:var(--emerald-400); background:rgba(16,185,129,0.1); padding:0.15rem 0.4rem; border-radius:4px;">
+            AI Pre-Drafted
+          </span>
+        </div>
+
+        <textarea class="sim-textarea" style="font-size:0.8125rem; min-height:100px;">Hi Sarah,
+
+We received your emergency dispatch request regarding the burst pipe at your residence. Our on-call emergency plumbing specialist is preparing dispatch right now. 
+
+If water is actively running, please shut off the main water shut-off valve immediately. Our technician will call you in 3 minutes.
+
+– Emergency Triage Team</textarea>
+
+        <button class="btn btn-primary btn-sm" id="drawer-resend-send-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+          Send via Resend REST API (3,000 Free/Mo)
+        </button>
+        <div id="drawer-resend-status" style="display:none; font-size:0.75rem; color:var(--emerald-400); text-align:center;">
+          ✓ Email transmitted via Resend API (HTTP 200 OK)
+        </div>
+      </div>
+
+      <!-- Security Meta -->
+      <div style="font-size:0.75rem; color:var(--text-muted); display:flex; flex-direction:column; gap:0.35rem; border-top:1px solid var(--border-subtle); padding-top:0.75rem;">
+        <div>WordPress Nonce: <code>lsx_nonce_7f9b8c2</code> (Verified)</div>
+        <div>Rate Limiting: <code>Transient PASS (&lt;10 req/min)</code></div>
+        <div>CSV DDE Protection: <code>Sanitized active</code></div>
+      </div>
+
+      <button class="btn btn-secondary btn-sm" data-close-drawer style="margin-top:auto;">
+        Close Drawer Preview
+      </button>
+
+    </div>
+  </aside>
+
+
+  <!-- ==========================================================================
+       Interactive Form Hook Modal (Triggered by clicking Form Cards)
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="ecosystem-hook-modal">
+    <div style="position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); width:90%; max-width:600px; background:#0c111d; border:1px solid var(--border-light); border-radius:var(--radius-xl); padding:2rem; box-shadow:0 25px 60px rgba(0,0,0,0.85); z-index:202; display:flex; flex-direction:column; gap:1.25rem;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3 id="hook-modal-title" style="font-size:1.125rem; font-weight:800; color:#fff;">Form Native Hook</h3>
+        <button id="close-hook-modal" class="btn-close-drawer" aria-label="Close Hook Modal">✕</button>
+      </div>
+
+      <pre id="hook-modal-code" style="background:#050810; padding:1rem; border-radius:var(--radius-sm); font-family:var(--font-mono); font-size:0.75rem; color:var(--cyan-400); border:1px solid var(--border-subtle); overflow-x:auto; white-space:pre-wrap;"></pre>
+      
+      <p id="hook-modal-desc" style="font-size:0.875rem; color:var(--text-secondary); line-height:1.5;"></p>
+
+      <div style="display:flex; justify-content:flex-end; gap:0.75rem;">
+        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('ecosystem-hook-modal').classList.remove('active')">Close</button>
+        <a href="https://wordpress.org/plugins/leadsortix-ai" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Install Free Plugin</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       Floating Quick Action Dock
+       ========================================================================== -->
+  <aside class="floating-quick-dock" aria-label="Quick Action Dock">
+    <a href="#simulator" class="dock-btn highlight">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+      </svg>
+      <span>Try Simulator</span>
+    </a>
+    <button class="dock-btn" data-open-drawer>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="15" y1="3" x2="15" y2="21"></line>
+      </svg>
+      <span>Admin Drawer</span>
+    </button>
+    <a href="https://wordpress.org/plugins/leadsortix-ai" target="_blank" rel="noopener noreferrer" class="dock-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.026 18.064c-.378-.016-.734-.055-1.06-.118l3.197-9.303 3.25 9.294c-.95.309-1.99.48-3.07.48-.77 0-1.509-.088-2.317-.353zm-6.666-6.064c0-2.457.994-4.686 2.605-6.305l3.96 10.842c-3.923-1.34-6.565-3.896-6.565-4.537zm13.118-4.498c.45.696.72 1.52.72 2.408 0 1.22-.507 2.37-1.348 3.284l-2.613-7.518c1.393.447 2.502 1.042 3.241 1.826z"/>
+      </svg>
+      <span>Get Free</span>
+    </a>
+  </aside>
+
+  <!-- Application Scripts -->
+  <script src="js/simulator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
